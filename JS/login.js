@@ -201,60 +201,67 @@ cadastroClick.addEventListener("click", (cadastro) => {
 
 //Evento de olho
 let eyeLogin = document.querySelector('#openLEye')
-eyeLogin.addEventListener('click', ()=>{
+eyeLogin.addEventListener('click', () => {
   const loginPass = document.querySelector("#senha");
-  if(loginPass.getAttribute('type') == 'password'){
-    loginPass.setAttribute("type","text");
-    eyeLogin.setAttribute("class","fa-regular fa-eye");
-  }else{
-    loginPass.setAttribute("type","password");
-    eyeLogin.setAttribute("class","fa-regular fa-eye-slash");
-    
+  if (loginPass.getAttribute('type') == 'password') {
+    loginPass.setAttribute("type", "text");
+    eyeLogin.setAttribute("class", "fa-regular fa-eye");
+  } else {
+    loginPass.setAttribute("type", "password");
+    eyeLogin.setAttribute("class", "fa-regular fa-eye-slash");
+
   }
 })
 
 let eyeCadastro = document.querySelector('#openCEye')
-eyeCadastro.addEventListener('click', ()=>{
+eyeCadastro.addEventListener('click', () => {
   const cadastroPass = document.querySelector("#senhaC");
-  if(cadastroPass.getAttribute('type') == 'password'){
-    cadastroPass.setAttribute("type","text");
-    eyeCadastro.setAttribute("class","fa-regular fa-eye");
-  }else{
-    cadastroPass.setAttribute("type","password");
-    eyeCadastro.setAttribute("class","fa-regular fa-eye-slash");
-    
+  if (cadastroPass.getAttribute('type') == 'password') {
+    cadastroPass.setAttribute("type", "text");
+    eyeCadastro.setAttribute("class", "fa-regular fa-eye");
+  } else {
+    cadastroPass.setAttribute("type", "password");
+    eyeCadastro.setAttribute("class", "fa-regular fa-eye-slash");
+
   }
 })
 
 let eyeCadastro2 = document.querySelector('#openCEye2')
-eyeCadastro2.addEventListener('click', ()=>{
+eyeCadastro2.addEventListener('click', () => {
   const cadastroPass2 = document.querySelector("#senhaCC");
-  if(cadastroPass2.getAttribute('type') == 'password'){
-    cadastroPass2.setAttribute("type","text");
-    eyeCadastro2.setAttribute("class","fa-regular fa-eye");
-  }else{
-    cadastroPass2.setAttribute("type","password");
-    eyeCadastro2.setAttribute("class","fa-regular fa-eye-slash");
-    
+  if (cadastroPass2.getAttribute('type') == 'password') {
+    cadastroPass2.setAttribute("type", "text");
+    eyeCadastro2.setAttribute("class", "fa-regular fa-eye");
+  } else {
+    cadastroPass2.setAttribute("type", "password");
+    eyeCadastro2.setAttribute("class", "fa-regular fa-eye-slash");
+
   }
 })
 
 //Dark mode botao
-let toggleBox = document.querySelector('#dark-mode');
+var toggle = 0
+let toggleDark = document.querySelector('#button-68');
 let body = document.querySelector('body');
 let loginContainer = document.querySelector('.login-container');
 let loginContainerLabel = document.querySelector('label');
 
-toggleBox.addEventListener('change', () => {
-    if (toggleBox.checked) {
-        console.log("Checkbox marcada");
-        body.setAttribute('style', 'background-color: #2b2b2b; color: #fff;');
-        loginContainer.setAttribute('style', 'background-color: #2b2b2b;')
-        loginContainerLabel.setAttribute('style', 'color: #fff;')
-    } else {
-        console.log("Checkbox desmarcada");
-        body.setAttribute('style', 'background-color: #fff; color: #2b2b2b;');
-        loginContainer.setAttribute('style', 'background-color: #fff;')
-        loginContainerLabel.setAttribute('style', 'color: #333;')
-    }
-});
+
+if (toggle === 0) {
+  toggleDark.addEventListener('click', () => {
+    toggle = 1
+    console.log(toggle)
+    body.setAttribute('style', 'background-color: #333; color: #333;');
+    loginContainer.setAttribute('style', 'background-color: #333;')
+    loginContainerLabel.setAttribute('style', 'color: #333;')
+  });
+}
+if (toggle === 1){
+  toggleDark.addEventListener('click', () => {
+    toggle = 0
+    console.log(toggle)
+    body.setAttribute('style', 'background-color: #333; color: #fff;');
+    loginContainer.setAttribute('style', 'background-color: #fff;')
+    loginContainerLabel.setAttribute('style', 'color: #fff;')
+  });
+}
