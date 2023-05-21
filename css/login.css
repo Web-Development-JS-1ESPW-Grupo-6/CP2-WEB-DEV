@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+}
+body{
+    background-color: #ffffff;
+    height: 100vh;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* base */
+.logoIMG-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login{
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+.login-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1em 5%;
+  background: #fbfbfb;
+  border-radius: 12px;
+  box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.65);
+  height: 63.3vh;
+  width: 30vh;
+  z-index: 1;/* Definição de camada */
+}
+.login-img {
+  width: 20vh;
+  padding: 2em 0;
+}
+.login-container label {
+  font-size: 1.1em;
+  font-weight: bold;
+  padding-top: 1em;
+  width: 50px;
+  color: #333;
+}
+/* Titulo */
+#login-card-title {
+  padding: 0 0;
+  font-size: 1.6em;
+  text-align: center;
+}
+.login-underline-title {
+  background: -webkit-linear-gradient(right, #ffffff, #e69d16);
+  height: 2px;
+  margin: 0 auto 0 auto;
+  width: 4.9em;
+} 
+/* Fim titulo */
+/* Erro Login*/
+.errorMsg{
+  display: flex;
+  font-weight: bold;
+  color: red;
+  justify-content: center;
+  padding-top: 3em;
+  padding-bottom: 1em;
+  visibility: hidden;
+}
+/* Formulario */
+.login-form {
+  align-items: left;
+  display: flex;
+  flex-direction: column;
+}
+.login-form-border {
+  background: -webkit-linear-gradient(right, #ffffff, #e69d16);
+  height: 1px;
+  width: 100%;
+}
+.login-form-content {
+  background: #fbfbfb;
+  padding-top: 10px;
+  border: none;
+  outline: none;
+  padding-top: 0.5em;
+  padding-left: 0.3em;
+  font-size: 1em;
+}
+/* fim formulario */
+#openLEye{
+  position: absolute;
+  top: 340px;
+  left: 320px;
+}
+#openLEye:hover{
+  cursor: pointer;
+}
+/* Começo botão */
+#login-submit-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #e69d16;
+  border: none;
+  border-radius: 21px;
+  box-shadow: 0px 1px 8px #ffffff;
+  cursor: pointer;
+  color: white;
+  margin: 2em auto;
+  height: 42.3px;
+  transition: 0.25s;
+  width: 153px;
+  padding: 1em;
+}
+#login-submit-btn:hover {
+  box-shadow: 0px 1px 18px #afafaf;
+}
+/* Fim botão */
+.sign-up {
+  padding: 1.5em 0em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#register{
+  color: #e69d16;
+  font-weight: 800;
+  text-decoration: none;
+}
+/* Inicio cadastro */
+.cadastro-container {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2em 5%;
+  background: #fbfbfb;
+  border-radius: 12px;
+  box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.65);
+  height: 60vh;
+  max-height: 60vh;
+  width: 30vh;
+  z-index: -2;/* Definição de camada */
+}
+
+.cadastro-container label {
+  font-size: 1.1em;
+  font-weight: bold;
+  padding-top: 1em;
+  width: auto;
+  color: #333;
+}
+/* Titulo */
+#cadastro-card-title {
+  padding: 0 0;
+  font-size: 1.4em;
+  text-align: center;
+}
+.cadastro-underline-title {
+  background: -webkit-linear-gradient(right, #ffffff, #e69d16);
+  height: 2px;
+  margin: 0 auto 0 auto;
+  width: 6em;
+} 
+/* Fim titulo */
+/* Erro Login*/
+.errorMsgC{
+  display: flex;
+  font-weight: bold;
+  color: red;
+  justify-content: center;
+  padding-top: 1em;
+  visibility: hidden;
+}
+/* Formulario */
+.cadastro-form {
+  align-items: left;
+  display: flex;
+  flex-direction: column;
+}
+.cadastro-form-border {
+  background: -webkit-linear-gradient(right, #ffffff, #e69d16);
+  height: 1px;
+  width: 100%;
+}
+.cadastro-form-content {
+  background: #fbfbfb;
+  padding-top: 10px;
+  border: none;
+  outline: none;
+  padding-top: 0.5em;
+  padding-left: 0.3em;
+  font-size: 1em;
+}
+.cadastro-form-content::placeholder {
+  color: rgba(78, 78, 78, 0.432);
+}
+/* fim formulario */
+#openCEye{
+  position: absolute;
+  top: 365px;
+  left: 320px;
+}
+#openCEye:hover{
+  cursor: pointer;
+}
+#openCEye2{
+  position: absolute;
+  top: 445px;
+  left: 320px;
+}
+#openCEye2:hover{
+  cursor: pointer;
+}
+
+.sign-up {
+  padding: 1.5em 0em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#sign-up{
+  color: #e69d16;
+  font-weight: 800;
+  text-decoration: none;
+}
+.req-msg{
+  font-size: 0.7em;
+}
+/* Fim cadastro */
+/* Começo botão */
+#cadastro-submit-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #e69d16;
+  border: none;
+  border-radius: 21px;
+  box-shadow: 0px 1px 8px #ffffff;
+  cursor: pointer;
+  color: white;
+  margin: 1em auto;
+  height: 42.3px;
+  transition: 0.25s;
+  width: 153px;
+  padding: 1em;
+}
+#cadastro-submit-btn:hover {
+  box-shadow: 0px 1px 18px #afafaf;
+}
+/* Fim botão */
+/* botao dark mode */
+.switch {
+  position: absolute;
+  top: 223px;
+  left: 945px;
+  width: 50px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ddd;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #e69d16;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #e69d16;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}

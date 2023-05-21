@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/login.css">
+    <script src="./JS/login.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <title>Vinicola Galo</title>
+    <link rel="shortcut icon" href="./imgs/Logo vinivola galo.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <!-- IMAGEM PRINCIPAL -->
+    <div class="logoIMG-container">
+        <img src="./imgs/Logo vinivola galo.png" class="login-img" alt="Galo Weather Logo">
+        <label class="switch">
+            <input id="dark-mode" type="checkbox">
+            <span class="slider round"></span>
+          </label>
+    </div>
+    <!-- FIM IMAGEM -->
+    <!-- Botao -->
+    <!--  -->
+    <main class="login">
+        <!-- INICIO LOGIN -->
+        <div class="login-container">
+            <div id="login-card-title">
+                <h2>LOGIN</h2>
+                <div class="login-underline-title"></div>
+            </div>
+            <form method="post" class="login-form">
+                <div class="errorMsg">Email ou senha incorretos</div>
+                <label for="email">
+                    &nbsp;Email
+                </label>
+                <input id="email" class="login-form-content" type="email" name="emailc" autocomplete="on" required>
+                <div class="login-form-border"></div>
+                <label for="senha">&nbsp;Password</label>
+                <input id="senha" class="login-form-content" type="password" name="senha" required><i id="openLEye"
+                    class="fa-regular fa-eye-slash" style="color: #e69d16;"></i>
+                <div class="login-form-border"></div>
+            </form>
+            <button type="submit" class="submitButton" id="login-submit-btn">
+                Fazer login
+            </button>
+            <div class="sign-up">
+                <span>Nao possui uma conta?</span>
+                <div class="register">
+                    <a href="javascript:void(0);" id="register">Cadastre-se</a>
+                </div>
+            </div>
+        </div>
+        <!-- FIM LOGIN -->
+        <!-- INICIO CADASTRO -->
+        <div class="cadastro-container">
+            <div id="cadastro-card-title">
+                <h2>Cadastro</h2>
+                <div class="cadastro-underline-title"></div>
+            </div>
+            <form method="post" class="cadastro-form">
+                <div class="errorMsgC">Email ou senha incorretos</div>
+                <!-- Nome -->
+                <label for="nameC">
+                    &nbsp;Nome
+                </label>
+                <input id="nameC" class="cadastro-form-content" type="text" name="nameC" autocomplete="on" required>
+                <div id="border-name" class="cadastro-form-border"></div>
+                <div class="req-msg">Minimo de 5 letras</div>
+                <!-- Sobrenome -->
+                <label for="nameC">
+                    &nbsp;Segundo Nome
+                </label>
+                <input id="name2C" class="cadastro-form-content" type="text" name="name2C" autocomplete="on" required>
+                <div id="border-name" class="cadastro-form-border"></div>
+                <div class="req-msg">Minimo de 5 letras</div>
+                <!-- Email -->
+                <label for="emailC">
+                    &nbsp;Email
+                </label>
+                <input id="emailC" class="cadastro-form-content" type="text" name="emailC" autocomplete="on"
+                    placeholder="email@provedor.com" required>
+                <div class="cadastro-form-border"></div>
+                <div class="req-msg">Minimo 5 letras</div>
+                <!-- Senha -->
+                <label for="senhaC">
+                    &nbsp;Senha
+                </label>
+                <input id="senhaC" class="cadastro-form-content" type="password" name="senhaC" required><i id="openCEye"
+                    class="fa-regular fa-eye-slash" style="color: #e69d16;"></i>
+                <div class="cadastro-form-border"></div>
+                <div class="req-msg">Senha deve ter entre 6 e 8 caracteres</div>
+                <!-- Confirm Senha -->
+                <label for="senhaCC">
+                    &nbsp;Confirmar senha
+                </label>
+                <input id="senhaCC" class="cadastro-form-content" type="password" name="senhaCC" autocomplete="on"
+                    required><i id="openCEye2" class="fa-regular fa-eye-slash" style="color: #e69d16;"></i>
+                <div class="cadastro-form-border"></div>
+                <div class="req-msg">Senhas devem ser iguais</div>
+                <!-- Botão -->
+            </form>
+            <button type="submit" class="submit-button" id="cadastro-submit-btn">
+                Cadastre-se
+            </button>
+            <!-- Redirecionamento para login -->
+            <div class="sign-up">
+                <span>ja possui uma conta?</span>
+                <div class="register">
+                    <a href="javascript:void(0);" id="sign-up">entrar</a>
+                </div>
+            </div>
+        </div>
+        <!-- FIM CADASTRO -->
+    </main>
+</body>
+
+</html>
