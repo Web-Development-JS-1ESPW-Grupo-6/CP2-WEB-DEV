@@ -259,7 +259,7 @@ body{
 }
 /* Fim botão */
 /* CSS */
-.button-68 {
+.darkModeButton {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -276,18 +276,26 @@ body{
   padding: 1em;
 }
 
-.button-68:hover {
+.darkModeButton:hover {
   background-color: #d89312;
   opacity: 1;
   transform: translateY(0);
   transition-duration: .35s;
 }
 
-.button-68:active {
+.darkModeButton:active {
   transform: translateY(2px);
   transition-duration: .35s;
 }
 
-.button-68:hover {
+.darkModeButton:hover {
   box-shadow: rgba(174, 154, 39, 0.2) 0 6px 12px;
+}
+
+.show-cadastro {
+  z-index: 2;
+}
+
+.hide-cadastro {
+  z-index: -2;
 }

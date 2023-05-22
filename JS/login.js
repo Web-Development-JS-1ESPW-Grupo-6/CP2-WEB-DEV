@@ -59,23 +59,20 @@ loginClick.addEventListener("click", (login) => {
 
 //----Sistema toggle login/cadastro----
 cadastroIndex.addEventListener("click", () => {
-  cadastroCard.setAttribute('style', 'z-index: 2;')
-})
+  cadastroCard.classList.add('show-cadastro');
+  cadastroCard.classList.remove('hide-cadastro');
+});
 loginIndex.addEventListener("click", () => {
-  cadastroCard.setAttribute('style', 'z-index: -2;')
-})
+  cadastroCard.classList.add('hide-cadastro');
+  cadastroCard.classList.remove('show-cadastro');
+});
 
 //----Cadastro----
 //Variaveis de cadastro
-let nameInputC = document.querySelector('#nameC').value;
-let name2InputC = document.querySelector('#name2C').value;
-let emailInputC = document.querySelector('#emailC').value;
-let senhaInputC = document.querySelector('#senhaC').value;
-let senhaConfirmInputC = document.querySelector('#senhaCC').value;
 //Evento de cadastro
 //nome
 let nameInputCBlock = document.querySelector('#nameC')
-nameInputCBlock.addEventListener('keyup', () => {
+nameInputCBlock.addEventListener("keyup", () => {
   if (nameInputCBlock.value.length < 5) {
     nameInputCBlock.setAttribute('style', 'color: #e50b03;')
   } else {
@@ -122,9 +119,12 @@ senhaConfirmInputCBlock.addEventListener('keyup', () => {
 //Cadastro
 cadastroClick.addEventListener("click", (cadastro) => {
   cadastro.preventDefault()
-
-  // let regiaoInput = document.querySelector('#regiaoC').value;
-  if (nameInputC == "" || emailInputC == "" || senhaInputC == "" || senhaConfirmInputC === "") {
+  const nameInputC = document.querySelector('#nameC').value;
+  const name2InputC = document.querySelector('#name2C').value;
+  const emailInputC = document.querySelector('#emailC').value;
+  const senhaInputC = document.querySelector('#senhaC').value;
+  const senhaConfirmInputC = document.querySelector('#senhaCC').value;
+  if (nameInputC == "" || name2InputC == "" || emailInputC == "" || senhaInputC == "" || senhaConfirmInputC == "") {
     msgErrorC.innerHTML = 'Todos os campos devem ser preenchidos'
     console.log('Todos os campos devem ser preenchidos');
     msgErrorC.setAttribute('style', 'visibility: visible;')
@@ -144,18 +144,13 @@ cadastroClick.addEventListener("click", (cadastro) => {
     msgErrorC.setAttribute('style', 'visibility: visible;')
     return;
   }
-  //email
-  if (emailInputC.length < 5) {
-    console.log('email com menos de 5 letras');
-    msgErrorC.innerHTML = 'Email deve conter mais de 5 caracteres'
-    msgErrorC.setAttribute('style', 'visibility: visible;')
-    return;
-  } else if (emailInputC.indexOf('@') === -1) {
-    console.log('email invalido nao contem "@"');
-    msgErrorC.innerHTML = 'Email deve conter "@"'
-    msgErrorC.setAttribute('style', 'visibility: visible;')
-    return;
-  }
+// email
+if (emailInputC.length < 5 || emailInputC.indexOf('@') === -1) {
+  console.log('email inválido');
+  msgErrorC.innerHTML = 'Email inválido';
+  msgErrorC.setAttribute('style', 'visibility: visible;');
+  return;
+}
   //senha
   if (senhaInputC.length < 6) {
     console.log('senha deve conter no minimo 6 digitos');
@@ -241,27 +236,33 @@ eyeCadastro2.addEventListener('click', () => {
 
 //Dark mode botao
 var toggle = 0
-let toggleDark = document.querySelector('#button-68');
+let toggleDark = document.querySelector('#darkModeButton');
 let body = document.querySelector('body');
 let loginContainer = document.querySelector('.login-container');
-let loginContainerLabel = document.querySelector('label');
+let cadastroContainer = document.querySelector('#container-cadastro');
+var labels = document.querySelectorAll('label');
 
 
-if (toggle === 0) {
-  toggleDark.addEventListener('click', () => {
+toggleDark.addEventListener('click', () => {
+  if (toggle == 0) {
+    //Dark mode
     toggle = 1
-    console.log(toggle)
-    body.setAttribute('style', 'background-color: #333; color: #333;');
-    loginContainer.setAttribute('style', 'background-color: #333;')
-    loginContainerLabel.setAttribute('style', 'color: #333;')
-  });
-}
-if (toggle === 1){
-  toggleDark.addEventListener('click', () => {
-    toggle = 0
-    console.log(toggle)
     body.setAttribute('style', 'background-color: #333; color: #fff;');
-    loginContainer.setAttribute('style', 'background-color: #fff;')
-    loginContainerLabel.setAttribute('style', 'color: #fff;')
-  });
-}
+    loginContainer.setAttribute('style', 'background-color: #333; color: #fff;');
+    cadastroContainer.setAttribute('style', 'background-color: #333; color: #fff;');
+    for (var i = 0; i < labels.length; i++) {
+      labels[i].style.color = '#fff';
+    }
+    console.log(toggle);
+  } else {
+    //Light mode
+    toggle = 0
+    body.setAttribute('style', 'background-color: #fff; color: #333;');
+    loginContainer.setAttribute('style', 'background-color: #fff; color: #333;');
+    cadastroContainer.setAttribute('style', 'background-color: #fff; color: #333;');
+    for (var i = 0; i < labels.length; i++) {
+      labels[i].style.color = '#333';
+    }
+    console.log(toggle);
+  }
+})

@@ -23,7 +23,7 @@
     <!--  -->
     <main class="login">
         <!-- INICIO LOGIN -->
-        <div class="login-container">
+        <div class="login-container" id="login-container">
             <div id="login-card-title">
                 <h2>LOGIN</h2>
                 <div class="login-underline-title"></div>
@@ -33,10 +33,12 @@
                 <label for="email">
                     &nbsp;Email
                 </label>
-                <input id="email" class="login-form-content" type="email" name="emailc" autocomplete="on" required>
+                <input id="email" class="login-form-content" type="email" name="emailc">
                 <div class="login-form-border"></div>
-                <label for="senha">&nbsp;Password</label>
-                <input id="senha" class="login-form-content" type="password" name="senha" required><i id="openLEye"
+                <label for="senha">
+                    &nbsp;Password
+                </label>
+                <input id="senha" class="login-form-content" type="password" name="senha"><i id="openLEye"
                     class="fa-regular fa-eye-slash" style="color: #e69d16;"></i>
                 <div class="login-form-border"></div>
             </form>
@@ -52,7 +54,7 @@
         </div>
         <!-- FIM LOGIN -->
         <!-- INICIO CADASTRO -->
-        <div class="cadastro-container">
+        <div class="cadastro-container" id="container-cadastro">
             <div id="cadastro-card-title">
                 <h2>Cadastro</h2>
                 <div class="cadastro-underline-title"></div>
@@ -63,29 +65,29 @@
                 <label for="nameC">
                     &nbsp;Nome
                 </label>
-                <input id="nameC" class="cadastro-form-content" type="text" name="nameC" autocomplete="on" required>
+                <input id="nameC" class="cadastro-form-content" type="text" name="nameC">
                 <div id="border-name" class="cadastro-form-border"></div>
                 <div class="req-msg">Minimo de 5 letras</div>
                 <!-- Sobrenome -->
                 <label for="nameC">
                     &nbsp;Segundo Nome
                 </label>
-                <input id="name2C" class="cadastro-form-content" type="text" name="name2C" autocomplete="on" required>
+                <input id="name2C" class="cadastro-form-content" type="text" name="name2C">
                 <div id="border-name" class="cadastro-form-border"></div>
                 <div class="req-msg">Minimo de 5 letras</div>
                 <!-- Email -->
                 <label for="emailC">
                     &nbsp;Email
                 </label>
-                <input id="emailC" class="cadastro-form-content" type="text" name="emailC" autocomplete="on"
-                    placeholder="email@provedor.com" required>
+                <input id="emailC" class="cadastro-form-content" type="text" name="emailC"
+                    placeholder="email@provedor.com">
                 <div class="cadastro-form-border"></div>
                 <div class="req-msg">Minimo 5 letras</div>
                 <!-- Senha -->
                 <label for="senhaC">
                     &nbsp;Senha
                 </label>
-                <input id="senhaC" class="cadastro-form-content" type="password" name="senhaC" required><i id="openCEye"
+                <input id="senhaC" class="cadastro-form-content" type="password" name="senhaC"><i id="openCEye"
                     class="fa-regular fa-eye-slash" style="color: #e69d16;"></i>
                 <div class="cadastro-form-border"></div>
                 <div class="req-msg">Senha deve ter entre 6 e 8 caracteres</div>
@@ -93,8 +95,8 @@
                 <label for="senhaCC">
                     &nbsp;Confirmar senha
                 </label>
-                <input id="senhaCC" class="cadastro-form-content" type="password" name="senhaCC" autocomplete="on"
-                    required><i id="openCEye2" class="fa-regular fa-eye-slash" style="color: #e69d16;"></i>
+                <input id="senhaCC" class="cadastro-form-content" type="password" name="senhaCC" 
+                    ><i id="openCEye2" class="fa-regular fa-eye-slash" style="color: #e69d16;"></i>
                 <div class="cadastro-form-border"></div>
                 <div class="req-msg">Senhas devem ser iguais</div>
                 <!-- Botão -->
@@ -113,7 +115,7 @@
         <!-- FIM CADASTRO -->
     </main>
     <div>
-        <button class="button-68" id="button-68" role="button">Dark Mode</button>
+        <button class="darkModeButton" id="darkModeButton">Dark Mode</button>
     </div>
 </body>
 

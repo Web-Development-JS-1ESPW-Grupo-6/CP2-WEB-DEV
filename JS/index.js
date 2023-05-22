@@ -10,7 +10,7 @@ toggleBox.addEventListener('change', () => {
         navbar.setAttribute('style', 'background-color: #2b2b2b; box-shadow: 0em 0.3125em 0.625em 0em #e69d16;');
     } else {
         console.log("Checkbox desmarcada");
-        body.setAttribute('style', 'background-color: #fff; color: #2b2b2b;');
+        body.setAttribute('style', 'background-color: #fbfbfb; color: #2b2b2b;');
         navbar.setAttribute('style', 'background-color: #fff; box-shadow: 0em 0.3125em 0.625em 0em #aaa;');
     }
 });
